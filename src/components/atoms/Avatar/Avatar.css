@@ -1,0 +1,9 @@
+.avatar {
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.avatar img {
+
+    object-fit: cover !important;
+}
