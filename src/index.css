@@ -27,9 +27,3 @@
     background: url("/bg.webp") no-repeat;
     color: var(--text-normal-color);
 }
-
-.container {
-    width: 90vw;
-    margin-bottom: 50px;
-    height: 90vh;
-}

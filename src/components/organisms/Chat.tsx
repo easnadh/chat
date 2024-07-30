@@ -1,10 +1,15 @@
 import { Button, Frame, Separator, TextInput } from 'react95';
 import { Info } from '../molecules/Info.tsx';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Message } from '../molecules/Message.tsx';
 
 export const Chat = () => {
   const [text, setText] = useState('');
+
+  const endRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
 
   return (
     <Frame variant='well' className='flex flex-col flex-2 h-9.5/10 p-2 gap-1'>
@@ -18,6 +23,7 @@ export const Chat = () => {
         <Message />
         <Message isMine />
         <Message />
+        <div ref={endRef}></div>
       </div>
       <Separator />
       <div className='flex justify-between'>

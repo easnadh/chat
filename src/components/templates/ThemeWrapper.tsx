@@ -33,7 +33,7 @@ export const ThemeWrapper = ({ children }: { children: ReactElement }) => {
       <GlobalStyles />
       <ThemeProvider theme={original}>
         {open && (
-          <Window className='container'>
+          <Window className='w-9/10 h-9/10 mb-12'>
             <WindowHeader className='flex justify-between items-center'>
               <span>real-time chat</span>
               <Button onClick={() => setOpen(!open)}>
